@@ -1,3 +1,2 @@
 <h1>Задание 1</h1>
-
-![alt text](/img/image.png)
+![alt text](img/2026-05-14_21-24-18.png)
