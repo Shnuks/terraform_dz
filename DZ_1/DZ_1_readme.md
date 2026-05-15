@@ -290,7 +290,6 @@ docker ps
 
 <img width="1076" height="51" alt="изображение" src="https://github.com/user-attachments/assets/6f985d47-5032-4c5e-96d8-c2c4fbb42172" />
 
-
 6) Проверка переменных
 
 
