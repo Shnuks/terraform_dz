@@ -2,7 +2,8 @@
 
 <h3>Terraform и docker установлены</h3>
 
-![alt text](img/image.png)
+<img width="451" height="159" alt="изображение" src="https://github.com/user-attachments/assets/28d0d4be-e1c6-4a6e-b3f0-c53a988797df" />
+
 
 <h2>Задание 1</h2>
 <h4>1) Каталог скопирован</h4> 
