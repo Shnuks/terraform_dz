@@ -89,10 +89,7 @@ resource "docker_container" "nginx" {
 ```
 
 Исправлено на:
-
-```bash
-name  = "example_${random_password.random_string.result}"
-```
+c
 
 
 <h4>5) Исправленный вариант кода:</h4>
@@ -139,4 +136,52 @@ resource "docker_container" "nginx" {
 
 ```
 
+<img width="978" height="67" alt="изображение" src="https://github.com/user-attachments/assets/08007861-b694-42a8-af3b-d70f9c53097b" />
+
+
+
+<h4>6) Замена имени docker-контейнера в блоке кода на hello_world </h4>
+
+```bash
+resource "docker_container" "nginx" {
+  image = docker_image.nginx.image_id
+  name  = "Hello_world"
+```
+
+Ответ на вопрос:
+
+-auto-approve в основном используется при автоматизации, в скриптах т.п. из-за того, что есть необходимость запускать проект без подтверждения действия. Опасность данной команды заключается в том, при запуске проекта нет проверки плана из-за этого можно упусить ошибки или случайное удаление ресурсов.
+
+   <img width="890" height="111" alt="изображение" src="https://github.com/user-attachments/assets/d5f39c30-b7f7-4619-9609-77eb04ae2174" />
+
+
+<h4>7) Файл terraform.tfstate, послее удаления проекта</h4>
+
+   ```bash
+{
+  "version": 4,
+  "terraform_version": "1.14.9",
+  "serial": 11,
+  "lineage": "5cf24314-8461-0c7b-d93d-0c6f415d487a",
+  "outputs": {},
+  "resources": [],
+  "check_results": null
+}
+
+```
+
+<h4>8) docker-образ nginx:latest был не удален из-за того, что в конфигурационном файле пректа указано следующие: </h4>
+
+```bash
+resource "docker_image" "nginx"{
+  name         = "nginx:latest"
+  keep_locally = true
+}
+```
+
+Строка **`keep_locally = true`** означает, что образ не будет удален при операции уничтожения 
+
+Строчка из документации terraform провайдера docker:
+   
+**`keep_locally (Boolean) Если значение true, образ Docker не будет удален при операции уничтожения. Если значение false, образ будет удален из локального хранилища Docker при операции уничтожения.`**
 
