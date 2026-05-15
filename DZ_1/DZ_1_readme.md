@@ -23,3 +23,13 @@ required_version = "~>1.12.0"
 ```bash
 required_version = ">=1.12.0"
 ```
+Также было необходимо изменить значение переменной TF_CLI_CONFIG_FILE, т.к. Terraform по умолчанию ищет файл .terraformrc в корне
+
+```bash
+export TF_CLI_CONFIG_FILE=/home/terraform_user/01/src/.terraformrc 
+```
+Результат запуска кода проекта: 
+   
+<img width="781" height="611" alt="изображение" src="https://github.com/user-attachments/assets/422f3100-cdb8-4952-a4fe-7175b5cb49cd" />
+
+
