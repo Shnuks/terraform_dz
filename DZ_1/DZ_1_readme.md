@@ -314,6 +314,7 @@ env | grep MYSQ
 
 
 
+<img width="781" height="376" alt="изображение" src="https://github.com/user-attachments/assets/5ef7a558-919d-461f-a2e1-4e5362ab0f46" />
 
 
 
