@@ -324,6 +324,7 @@ snap install --classic opentofu
 
 Результат: 
 
+<img width="483" height="122" alt="изображение" src="https://github.com/user-attachments/assets/6c711dc0-a940-4da9-ad4b-961c4f0a9a65" />
 
 
 
