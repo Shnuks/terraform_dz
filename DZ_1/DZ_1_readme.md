@@ -251,6 +251,57 @@ chmod 644 /home/user/.ssh/ssh-key-1778845195639.pub
 chmod 600 /home/user/.ssh/ssh-key-1778845195639
 ```
 
+Следующим шагом было запуск проекта:
+
+1) Инициализация проекта:
+
+```bash
+terraform init
+```
+2) Проверка плана:
+
+```bash
+terraform plan
+```
+
+3) Применение конфигурации:
+
+```bash
+terraform apply
+yes
+```
+Результат:
+
+<img width="859" height="337" alt="изображение" src="https://github.com/user-attachments/assets/d7230140-41f3-4700-aa61-190c00dafe36" />
+
+4) Подключение к удаленной ВМ
+
+```bash
+ssh terroform_user@130.193.54.35
+```
+
+5) Проверка успешности запуска контейнера
+
+```bash
+docker ps
+```
+
+Результат:
+
+<img width="1076" height="51" alt="изображение" src="https://github.com/user-attachments/assets/6f985d47-5032-4c5e-96d8-c2c4fbb42172" />
+
+
+6) Проверка переменных
+
+
+```bash
+sudo docker exec -it mysql-db-Moj1CumtZwQHP7ru bash
+env | grep MYSQ
+```
+
+Результат:
+
+<img width="327" height="194" alt="изображение" src="https://github.com/user-attachments/assets/a3b734da-90bd-41bc-ae2f-17311b0f90e5" />
 
 
 
