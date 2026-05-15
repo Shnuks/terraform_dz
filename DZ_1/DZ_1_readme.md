@@ -367,6 +367,12 @@ provider_installation {
 export TOFU_CLI_CONFIG_FILE=/home/dz_project/.tofurc
 ```
 
+<img width="881" height="331" alt="изображение" src="https://github.com/user-attachments/assets/90d46649-ced0-4996-95cc-3719196ec223" />
+
+<img width="1108" height="77" alt="изображение" src="https://github.com/user-attachments/assets/024c3558-5b68-45b8-a870-e2ffcfbc640e" />
+
+
+
 
 
 
