@@ -310,11 +310,20 @@ env | grep MYSQ
 
 <img width="327" height="194" alt="изображение" src="https://github.com/user-attachments/assets/a3b734da-90bd-41bc-ae2f-17311b0f90e5" />
 
+<h2>Задание 3*</h2>
 
-
-
+   Для начала был снесен проект
 
 <img width="781" height="376" alt="изображение" src="https://github.com/user-attachments/assets/5ef7a558-919d-461f-a2e1-4e5362ab0f46" />
+
+Установка OpenTofy:
+
+```bash
+snap install --classic opentofu
+```
+
+Результат: 
+
 
 
 
