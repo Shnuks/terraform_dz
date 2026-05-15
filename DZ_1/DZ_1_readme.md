@@ -31,5 +31,70 @@ export TF_CLI_CONFIG_FILE=/home/terraform_user/01/src/.terraformrc
 Результат запуска кода проекта: 
    
 <img width="781" height="611" alt="изображение" src="https://github.com/user-attachments/assets/422f3100-cdb8-4952-a4fe-7175b5cb49cd" />
+   
+Секретное содержимое созданного ресурса random_password:
+    
+```bash
+1JmQn7ujLkXB5y8H
+```
+<img width="809" height="669" alt="изображение" src="https://github.com/user-attachments/assets/4ffcf502-8890-4aa7-961c-3e0b444527a8" />
+   
+
+<h4>4) Результат команды terraform validate</h4>
+   
+<img width="812" height="310" alt="изображение" src="https://github.com/user-attachments/assets/83e6d43b-8af1-4273-badf-401566ee0488" />
+   
+
+<h5>Выявлены 3 намеренно допущенные ошибки</h5>
+
+<h5>Ошибка 1 </h5>
+   
+Не указано локальное имя по структуре:
+   
+
+```bash
+resource "<TYPE>" "<LOCAL_NAME>" {
+```
+Исправлено:
+
+```bash
+resource "docker_image" "nginx"{
+  name         = "nginx:latest"
+  keep_locally = true
+}
+```
+
+<h5>Ошибка 2 </h5>
+  
+Некорректное имя ресурса (начало с цифры)
+   
+```bash
+resource "docker_container" "1nginx" {
+```
+
+Исправлено на:
+
+```bash
+resource "docker_container" "nginx" {
+```
+
+<h5>Ошибка 3</h5>
+
+   <img width="758" height="146" alt="изображение" src="https://github.com/user-attachments/assets/7924906d-7213-4ce3-9081-be24e9c82b38" />
+
+Неправильно указаана ссылка:
+
+```bash
+ name  = "example_${random_password.random_string_FAKE.resulT}"
+```
+
+Исправлено на:
+
+```bash
+name  = "example_${random_password.random_string.resulT}"
+```
+
+
+
 
 
