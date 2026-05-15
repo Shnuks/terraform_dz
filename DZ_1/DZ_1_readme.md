@@ -211,7 +211,7 @@ sudo systemctl enable docker
 sudo usermod -aG docker <username>
 ```
 
-Далее в директории home/ был создани проект с следующими файлами 
+Далее работы проводились на локально ВМ. В директории home/ был создани проект с следующими файлами 
 
 ```bash
 dz_project/
@@ -221,7 +221,35 @@ dz_project/
 ├── .gitignore
 ├── .terraformrc 
 ```
+   
+**`Наполнение файлов представлено в директории DZ_1/src_z2 `**
 
+После на локальную ВМ были загружены SSH ключи **`ssh-key-1778845195639`** и **`ssh-key-1778845195639.pub`**
+
+1) Добавление ключа в ssh-агент
+
+```bash
+ssh-add /home/user/.ssh/ssh-key-1778845195639
+```
+
+2) Настройка статического подключения
+
+```bash
+nano ~/.ssh/config
+```
+
+
+```bash
+Host 130.193.54.35
+  User terroform_user
+  IdentityFile /home/user/.ssh/ssh-key-1778845195639
+  IdentitiesOnly yes
+```
+   
+```bash
+chmod 644 /home/user/.ssh/ssh-key-1778845195639.pub
+chmod 600 /home/user/.ssh/ssh-key-1778845195639
+```
 
 
 
