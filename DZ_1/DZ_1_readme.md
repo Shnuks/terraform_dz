@@ -211,6 +211,16 @@ sudo systemctl enable docker
 sudo usermod -aG docker <username>
 ```
 
+Далее в директории home/ был создани проект с следующими файлами 
+
+```bash
+dz_project/
+├── main.tf
+├── variables.tf
+├── personal.auto.tfvars
+├── .gitignore
+├── .terraformrc 
+```
 
 
 
