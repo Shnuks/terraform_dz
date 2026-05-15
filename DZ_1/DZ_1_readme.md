@@ -382,7 +382,7 @@ tofu init
    
 <img width="881" height="331" alt="изображение" src="https://github.com/user-attachments/assets/90d46649-ced0-4996-95cc-3719196ec223" />
 
-Результат получился такой же как и при использовании Terraform^
+Результат получился такой же как и при использовании Terraform
    
 <img width="1108" height="77" alt="изображение" src="https://github.com/user-attachments/assets/024c3558-5b68-45b8-a870-e2ffcfbc640e" />
 
