@@ -185,3 +185,44 @@ resource "docker_image" "nginx"{
    
 **`keep_locally (Boolean) Если значение true, образ Docker не будет удален при операции уничтожения. Если значение false, образ будет удален из локального хранилища Docker при операции уничтожения.`**
 
+<h2>Задание 2*</h2>
+Задание выполнялось по следующему алгоритму:
+
+Сначала в Yandex Cloud была развернута VM
+   
+<img width="1526" height="83" alt="изображение" src="https://github.com/user-attachments/assets/1ad8e3f5-3094-46f2-9bb6-a07d22c61208" />
+
+Далее на нее была произведена установка terraform и docker
+   
+**`Установка Terraform:`**
+   
+```bash
+wget https://hashicorp-releases.yandexcloud.net/terraform/1.14.9/terraform_1.14.9_linux_amd64.zip
+unzip terraform_1.14.9_linux_amd64.zip
+cp -r terraform /usr/local/bin
+```
+
+**`Установка Docker:`**
+   
+```bash
+sudo apt update
+sudo apt install -y docker.io
+sudo systemctl enable docker
+sudo usermod -aG docker <username>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
