@@ -326,6 +326,46 @@ snap install --classic opentofu
 
 <img width="483" height="122" alt="изображение" src="https://github.com/user-attachments/assets/6c711dc0-a940-4da9-ad4b-961c4f0a9a65" />
 
+Дальше была очень муторная ностройка,т.к. init постоянно обращался в инет и ругался на соединие, поэтому пришлось установить провайдеров локально и запретить обращаться в интернет
+
+Измененные файлы:
+
+**`main.tf`**
+
+```bash
+terraform {
+  required_providers {
+    docker = {
+      source  = "kreuzwerker/docker"
+      version = "4.3.0"
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = "3.9.0"
+    }
+  }
+}
+```
+
+Созданные файлы :
+
+**`.tofurc`**
+
+```bash
+
+provider_installation {
+  filesystem_mirror {
+    path = "/home/dz_project/.tofu/providers"
+  }
+}
+```
+
+Важные команды: 
+
+
+```bash
+export TOFU_CLI_CONFIG_FILE=/home/dz_project/.tofurc
+```
 
 
 
