@@ -326,7 +326,7 @@ snap install --classic opentofu
 
 <img width="483" height="122" alt="изображение" src="https://github.com/user-attachments/assets/6c711dc0-a940-4da9-ad4b-961c4f0a9a65" />
 
-Дальше была очень муторная ностройка,т.к. init постоянно обращался в инет и ругался на соединие, поэтому пришлось установить провайдеров локально и запретить обращаться в интернет
+Дальше была очень муторная ностройка,т.к. init постоянно обращался в инет и ругался на соединение, поэтому пришлось установить провайдеров локально и запретить обращаться в интернет
 
 Измененные файлы:
 
@@ -364,11 +364,26 @@ provider_installation {
 
 
 ```bash
+echo "127.0.0.1 registry.opentofu.org" | sudo tee -a /etc/hosts
+
+rm /home/dz_project/.terraform.lock.hcl
+
+# Установка короткого таймаута на DNS и соединение
+export TF_CLI_CONFIG_FILE=/home/dz_project/.tofurc
+export TOFU_HTTP_TIMEOUT=10
+
 export TOFU_CLI_CONFIG_FILE=/home/dz_project/.tofurc
+cd /home/dz_project
+tofu init
+
 ```
 
+По итогу проект наконец-то запустился:
+   
 <img width="881" height="331" alt="изображение" src="https://github.com/user-attachments/assets/90d46649-ced0-4996-95cc-3719196ec223" />
 
+Результат получился такой же как и при использовании Terraform^
+   
 <img width="1108" height="77" alt="изображение" src="https://github.com/user-attachments/assets/024c3558-5b68-45b8-a870-e2ffcfbc640e" />
 
 
